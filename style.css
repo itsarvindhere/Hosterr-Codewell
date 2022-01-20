@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* VARIABLES */
+
+:root {
+    ---background-color: #f9f4e8;
+    --button-color: #4977ea;
+    --grey-text: #525252;
+}
+
+html {
+    font-size: 1rem;
+}
+
+body {
+    background-color: var(---background-color);
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    padding: 3em 15em;
+}
+
+p {
+    color: var(--grey-text);
+    font-size: 1.2rem;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--grey-text);
+    font-family: inherit;
+    font-size: 1.2rem;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-family: inherit;
+}
+
+/* NAVBAR */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li:not(:last-child) {
+    margin-right: 1.2em;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2em;
+}
+
+nav .logo {
+    display: flex;
+    gap: 1.2em;
+}
+
+nav .hamburger-icon {
+    display: none;
+}
+
+.gradient-button {
+    background: linear-gradient(90deg, rgba(234,172,83,1) 0%, rgba(234,123,102,1) 35%, rgba(234,88,114,1) 92%, rgba(234,88,114,1) 99%, rgba(234,88,114,1) 100%);
+    border-radius: 20px;
+    padding: 0.4em 1em;
+    font-size: 0.8rem;
+}
+
+.button {
+    background-color: var(--button-color);
+    border-radius: 4px;
+    padding: 0.8em 1em;
+}
+
+/* MAIN CONTENT */
+
+main {
+    margin-top: 10em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10em;
+}
+
+main .left {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 50%;
+}
+
+main .left h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+}
+
+main .left p {
+    width: 75%;
+}
+
+main .right {
+    width: 400px;
+    justify-self: flex-end;
+}
+
+main .right img {
+    width: 100%;
+}
+
+main label {
+    display: flex;
+    gap: 1em;
+}
+
+input {
+    border: none;
+    padding: 1em;
+    border-radius: 4px;
+    padding-left: 1.5em;
+    padding-right: 6em;
+    font-size: 1.2rem;
+}
+
+.left .button {
+    font-size: 1.2rem;
+}
+
+::placeholder {
+    color: var(--grey-text);
+    opacity: 1;
+}
+
+.left .note {
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
+}
+
+
+.right{
+    position: relative;
+    top: -200px;
+}
+
+.right .blue, .right .pink, .right .purple, .right .model {
+   position: absolute;
+}
+
+.right .model {
+    z-index: 4;
+}
+
+.right .purple {
+    z-index: 3;
+    transform: rotate(-20deg);
+}
+
+.right .pink {
+    z-index: 2;
+    transform: rotate(-35deg);
+}
+
+.right .blue {
+    z-index: 1;
+    transform: rotate(-45deg);
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 10em;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer ul {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    gap: 1.2em;
+}
+
+footer .specialist {
+    display: flex;
+    gap: 1em;
+}
+
+
+footer .help-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer .help-text p {
+    font-family: 'Playfair Display', serif;
+    color: #000;
+    width: max-content;
+}
+
+@media screen and (max-width: 1526px) {
+    html {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 1236px) {
+    html {
+        font-size: 0.7rem;
+    }
+
+    main .right {
+        width: 300px;
+        justify-self: flex-end;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    html {
+        font-size: 0.6rem;
+    }
+
+    main .right {
+        width: 300px;
+        justify-self: flex-end;
+    }
+}
+
+@media screen and (max-width: 980px) {
+
+        .container {
+            padding: 3em 6em;
+        }
+        nav ul, .nav-right {
+            display: none;
+        }
+
+        nav .hamburger-icon {
+            display: block;
+        }
+
+        main {
+            flex-direction: column-reverse;
+            margin-top: 25em;
+        }
+
+        main .left{
+            width: 100%;
+            margin-top: 6em;
+        }
+
+        main .left h2 {
+            font-size: 5rem;
+        }
+        
+        main .left p {
+            width: 100%;
+            font-size: 1.8rem;
+        }
+
+        .left .button, input, a, p,footer h3{
+            font-size: 1.8rem;
+        }
+
+}
+
+@media screen and (max-width: 668px) {
+    main {
+        margin-top: 30em;
+    }
+
+    .left label {
+        flex-direction: column;
+    }
+
+    footer {
+        margin-top: 5em;
+        flex-direction: column;
+        gap: 5em;
+    }
+}
