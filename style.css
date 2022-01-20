@@ -358,8 +358,23 @@ footer .help-text p {
 }
 
 @media screen and (max-width: 668px) {
+
+    .container {
+        padding: 3em;
+        overflow: hidden;
+    }
     main {
         margin-top: 30em;
+    }
+
+    main .right {
+        padding-left: 2em;
+        width: 250px;
+    }
+
+    main .left{
+        width: 100%;
+        margin-top: 3em;
     }
 
     .left label {
